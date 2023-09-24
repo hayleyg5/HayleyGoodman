@@ -19,8 +19,8 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-color: black;
-  min-height: 80%;
+  background-color: pink;
+  min-height: 60%;
   margin-top: 100px;
 }
 
@@ -34,10 +34,10 @@ body, html {
 <!-- Top menu  background-image: url("/images/mac.jpg"); -->
 
 <div class="w3-top">
-  <div class="w3-light-grey w3-xlarge w3-bar w3-card" style="max-width:1600px;margin:auto">
+  <div class="w3-xlarge w3-bar w3-card" style="max-width:1600px;margin:auto; background-color: #82D1F1;">
     <div class="w3-left w3-padding-16 w3-hide-small">
-      <a href="resume.html" class="w3-bar-item w3-button">Resume</a>
-      <a href="portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
+      <a href="resume.html" class="w3-bar-item w3-button w3-text-white">Resume</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-text-white">Portfolio</a>
     </div>
 
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-padding-16 w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -45,12 +45,12 @@ body, html {
     </a>
 
     <div class="w3-right w3-padding-16">
-      <a href="https://www.linkedin.com/in/hayley-goodman-144644164/" target="_blank" class="fa fa-linkedin w3-bar-item w3-button w3-padding-16" style="color: #000000;"></a>
-      <a href="https://www.instagram.com/hayley_e_g/?hl=en" target="_blank" class="fa fa-instagram w3-bar-item w3-button w3-padding-16" style="color: #000000;"></a>
-      <a href="mailto:hayleyg5@gmail.com" class="fa fa-envelope w3-bar-item w3-button w3-padding-16" style="color: #000000;"></a>
+      <a href="https://www.linkedin.com/in/hayley-goodman-144644164/" target="_blank" class="fa fa-linkedin w3-bar-item w3-button w3-padding-16" style="color: white;"></a>
+      <a href="https://www.instagram.com/hayley_e_g/?hl=en" target="_blank" class="fa fa-instagram w3-bar-item w3-button w3-padding-16" style="color: white;"></a>
+      <a href="mailto:hayleyg5@gmail.com" class="fa fa-envelope w3-bar-item w3-button w3-padding-16" style="color: white;"></a>
     </div>
     <div class="w3-center w3-padding-16">
-      <a href="index.html" class="w3-button">Hayley Goodman</a>
+      <a href="index.html" class="w3-button w3-text-white">Hayley Goodman</a>
     </div>
   </div>
 </div>
@@ -58,22 +58,23 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button">Resume</a>
+  <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-opacity">Resume</a>
   <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">Portfolio</a>
 </nav>
 
 <!-- Main Section -->
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+
+<!-- Header with full-height image w3-grayscale-min -->
+<header class="bgimg-1 w3-display-container" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Hi, I'm Hayley</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Hi, I'm Hayley</span><br>
-    <span class="w3-xlarge">Let me show you my world :)</span>
+    <span class="w3-jumbo w3-hide-small">Hayley Goodman</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Hayley Goodman</span><br>
+    <span class="w3-xlarge">UI/UX Designer</span>
     <!-- <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p> -->
   </div> 
-  <div class="w3-display-right" style="padding:48px">
-    <img src="/images/Hbw.JPG" style="width:50%;" class="w3-right">
+  <div class="w3-display-container" style="padding:70px; margin-right: 50px;">
+    <img src="/images/hformal.jpg" style="width:25%;" class="w3-right">
   </div> 
 
   <!--
@@ -88,12 +89,92 @@ body, html {
   -->
 </header>
 
-<div class="w3-container w3-padding-large" style="margin-bottom:32px">
-  <h2><b>My Story</b></h2>
-  <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-  <hr>
+<div class="w3-container w3-padding-large w3-white" style="margin-bottom:32px">
+  <div class="w3-container w3-padding-16" style="background-color: pink;">
+    <h1 style="text-align: center; background-color: pink;"><b>My Story</b></h1>
+  </div>
 
-<!-- Contact Section -->
+  <table cellspacing="5" style="padding-left: 50px; padding-right: 50px;">
+
+    <tr>
+      <td style="height:50%; width:50%; align-content: center; vertical-align: middle;">
+        <img src="images/Europe-collage-wtitles.jpg" style="width:80%;">
+        <img src="images/second-collage-wtitles.jpg" style="width:80%;">
+      </td>
+    
+      <td style="font-size: 18px; padding: 20px">
+        <p style="padding-bottom: 30px">
+          Hi, I’m Hayley! A junior software developer from Ottawa, Canada, with a passion for UI/UX design and development. 
+          After graduating from uOttawa with a Bachelor’s degree in Computer Engineering, I worked for a military tech startup as an Embedded Software Architect. 
+          As the first employee hired, I had the opportunity to work on their product in the very early stages of development, 
+          and I really enjoyed contributing to design decisions including prototyping and implementing the entire UI for the Android application.
+        </p>
+        <p style="padding-bottom: 30px">
+          I also worked a part-time serving job to get myself out of the house after my 9-5. 
+          This eventually became my full-time job so that I could pursue my dreams of traveling more post-university. 
+          In the last year alone, I’ve visited Greece, Italy, France, England, Portugal, the Dominican Republic, British Columbia, New York, Wisconsin, and explored my hometown province of Ontario. 
+          I’ve always loved immersing myself in different cultures, and I plan to continue doing so whenever I have the chance.
+        </p>
+        <p style="padding-bottom: 30px">
+          I’ve always loved art and design. While painting has always been my favourite creative outlet, 
+          university introduced me to web and mobile app design that combined my interests and skills in tech design. 
+          Check out my favourite paintings <a href="portfolio.html">here</a>, or discover my portfolio, as well as my resume, or download them both.
+        </p>
+        <p style="padding-bottom: 30px">
+          When I’m not designing, you might find me golfing, or skiing up at my family cottage in Mont Tremblant.
+        </p>
+      </td>
+    </tr>
+    </table>
+
+
+  <!--
+  <p style="font-size: 18px; padding-left: 60px; padding-right: 60px; text-align: center;">
+    Hi, I’m Hayley! A junior software developer from Ottawa, Canada, with a passion for UI/UX design and development. 
+    After graduating from uOttawa with a Bachelor’s degree in Computer Engineering, I worked for a military tech startup as an Embedded Software Architect. 
+    As the first employee hired, I had the opportunity to work on their product in the very early stages of development, 
+    and I really enjoyed contributing to design decisions including prototyping and implementing the entire UI for the Android application.
+  </p>
+
+  <table cellspacing="5" style="padding-left: 50px; padding-right: 50px;">
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">
+        <p style="font-size: 18px;">
+        I also worked a part-time serving job to get myself out of the house after my 9-5. 
+        This eventually became my full-time job so that I could pursue my dreams of traveling more post-university. 
+        In the last year alone, I’ve visited Greece, Italy, France, England, Portugal, the Dominican Republic, British Columbia, New York, Wisconsin, and explored my hometown province of Ontario. 
+        I’ve always loved immersing myself in different cultures, and I plan to continue doing so whenever I have the chance.
+        </p>
+      </td>
+
+      <td style="height:50%; width:50%; align-content: center; vertical-align: middle;">
+        <img src="images/Europe-collage-wtitles.jpg" style="width:80%;">
+      </td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">
+        <img src="images/second-collage-wtitles.jpg" style="width:80%;">
+      </td>
+
+      <td>
+        <p style="font-size: 18px; text-align: center; vertical-align: middle;">
+        I’ve always loved art and design. While painting has always been my favourite creative outlet, 
+        university introduced me to web and mobile app design that combined my interests and skills in tech design. 
+        Check out my favourite paintings <a href="portfolio.html">here</a>, or discover my portfolio, as well as my resume, or download them both.
+        <br>
+        <br>
+        When I’m not designing, you might find me golfing, or skiing up at my family cottage in Mont Tremblant.
+        </p>
+      </td>
+
+    </tr>
+    </table>
+  -->
+
+
+<!-- 
+<!-- Contact Section
 <div class="w3-container w3-padding-large w3-grey">
   <h4 id="contact"><b>Contact Me</b></h4>
   <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
@@ -127,6 +208,19 @@ body, html {
     <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
   </form>
 </div>
+-->
+</div>
+
+<footer class="w3-container w3-black w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 
 <script>
 // Script to open and close sidebar
