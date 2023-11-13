@@ -9,45 +9,60 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+a:visited {
+color: white;
+background-color: white;
+}
+
+/* When you mouse over link */
+a:hover {
+color: #ffdbe0;
+}
+
+/* When it is selected link */
+a:active {
+color: #ffdbe0;
+}
 </style>
 </head>
-<body class="w3-black w3-content" style="max-width:1600px">
+<body class="w3-content" style="max-width:1600px; background-color: #d8b9ff;">
 
-<!-- Top menu -->
-
-<div class="w3-top">
-  <div class="w3-xlarge w3-bar w3-card" style="max-width:1600px;margin:auto;background-color: #82D1F1;">
-    <div class="w3-left w3-padding-16 w3-hide-small">
-      <a href="resume.html" class="w3-bar-item w3-button">Resume</a>
-      <a href="portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
-    </div>
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-padding-16 w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars w3-bar-item w3-button w3-padding-16"></i>
-    </a>
-
-    <div class="w3-right w3-padding-16">
-        <a href="https://www.linkedin.com/in/hayley-goodman-144644164/" target="_blank" class="fa fa-linkedin w3-bar-item w3-button w3-padding-16" style="color: #000000;"></a>
-        <a href="https://www.instagram.com/hayley_e_g/?hl=en" target="_blank" class="fa fa-instagram w3-bar-item w3-button w3-padding-16" style="color: #000000;"></a>
-        <a href="mailto:hayleyg5@gmail.com" class="fa fa-envelope w3-bar-item w3-button w3-padding-16" style="color: #000000;"></a>
-    </div>
-    <div class="w3-center w3-padding-16">
-      <a href="index.html" class="w3-button">Hayley Goodman</a>
+  <!-- Top menu  background-image: url("/images/mac.jpg"); -->
+  
+  <div class="w3-top">
+    <div class="w3-xlarge w3-bar w3-card" style="max-width:1600px;margin:auto; background-color: #82D1F1;">
+      <div class="w3-left w3-padding-16 w3-hide-small">
+        <a href="resume.html" class="w3-bar-item" style="padding:16px; text-decoration: none;">Resume</a>
+        <a href="portfolio.html" class="w3-bar-item" style="padding:16px; text-decoration: none;">Portfolio</a>
+      </div>
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-padding-16 w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars w3-bar-item w3-button w3-padding-16"></i>
+      </a>
+  
+      <div class="w3-right w3-padding-16">
+        <a href="https://www.linkedin.com/in/hayley-goodman-144644164/" target="_blank" class="fa fa-linkedin w3-bar-item w3-padding-16" style="text-decoration: none;"></a>
+        <a href="https://www.instagram.com/hayley_e_g/?hl=en" target="_blank" class="fa fa-instagram w3-bar-item w3-padding-16" style="text-decoration: none;"></a>
+        <a href="mailto:hayleyg5@gmail.com" class="fa fa-envelope-o w3-bar-item w3-padding-16" style="color:white; text-decoration: none;"></a>
+      </div>
+      <div class="w3-center w3-padding-16">
+        <a href="index.html" class="w3-button w3" style="padding:16px; ">Hayley Goodman</a>
+      </div>
     </div>
   </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button">Resume</a>
-  <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">Portfolio</a>
-</nav>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-opacity">Resume</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">Portfolio</a>
+  </nav>
 
 <!-- Main Section -->
 
 <!-- Page Container -->
-<div class="w3-content" style="max-width:1400px; margin-top:100px;">
+<div class="w3-content" style="max-width:1400px; margin-top:125px;">
 
     <!-- The Grid -->
     <div class="w3-row-padding">
@@ -57,16 +72,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container" style="max-height:500px">
-            <img src="/images/hformal.jpg" style="width:80%; height:60%; padding-left:80px; padding-top:50px; padding-bottom:60px;" alt="Avatar">
-            <div class="w3-display-bottomleft w3-container w3-text-black">
-              <h2>Hayley Goodman</h2>
+            <img src="/images/hformalfull.jpg" style="width:80%; height:60%; padding-left:80px; padding-top:50px; padding-bottom:60px;" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-grey">
+              <h2><b>Hayley Goodman</b></h2>
             </div>
           </div>
           <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-black"></i>Designer</p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-black"></i>Ottawa, CA</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-black"></i>hayleyg5@gmail.com</p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-black"></i>613-617-3373</p>
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large" style="color:#82D1F1"></i>Designer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large" style="color:#82D1F1"></i>Ottawa, CA</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large" style="color:#82D1F1"></i>hayleyg5@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large" style="color:#82D1F1"></i>613-617-3373</p>
             <hr>
 
             <!--
@@ -95,35 +110,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             </div>
           -->
   
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-black"></i>Technical Skills</b></p>
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right" style="color:#82D1F1"></i>Technical Skills</b></p>
             <p>HTML & CSS</p>
             <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:90%">
+              <div class="w3-container w3-center w3-round-xlarge" style="width:90%; background-color: #82D1F1;">
                 <div class="w3-center w3-text-white">90%</div>
               </div>
             </div>
             <p>Java & Python</p>
             <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:80%">80%</div>
+              <div class="w3-container w3-center w3-round-xlarge w3-text-white" style="width:80%; background-color: #82D1F1;">80%</div>
             </div>
             <p>UI/UX Design</p>
             <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:80%">80%</div>
+              <div class="w3-container w3-center w3-round-xlarge w3-text-white" style="width:80%; background-color: #82D1F1;">80%</div>
             </div>
             <p>Android Studio</p>
             <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:75%">75%</div>
+              <div class="w3-container w3-center w3-round-xlarge w3-text-white" style="width:75%; background-color: #82D1F1;">75%</div>
             </div>
             <p>React, Node, Angular, & jQuery</p>
             <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-black" style="width:50%">
+              <div class="w3-container w3-center w3-round-xlarge" style="width:50%; background-color: #82D1F1;">
                 <div class="w3-center w3-text-white">50%</div>
               </div>
             </div>
             <hr>
 
 
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-black"></i>Interpersonal Skills</b></p>
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right" style="color:#82D1F1"></i>Interpersonal Skills</b></p>
             <div class="w3-container">
                 <p>Written Communication</p>
                 <ul>
@@ -155,11 +170,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-twothird">
       
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Work Experience</h2>
+          <h2 class="w3-text-grey"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge" 
+            style="color:#82D1F1; padding: 10px"></i><b>Work Experience</b></h2>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Server/Bartender | The Barley Mow</b></h5>
-            <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>October 2021 - Present</h6>
-            <ul>
+            <h6 style="color:#82D1F1"><i class="fa fa-calendar fa-fw w3-margin-right" style="color:#82D1F1"></i>October 2021 - Present</h6>
+            <ul class="w3-text-grey">
                 <li>Deliver exceptional, friendly, and fast service to customers in a high-volume environment</li>
                 <li>Serve food, prepare drinks, process payments, and package take-out orders</li>
                 <li>Work alone and act as the server, bartender, host, and busser simultaneously </li>
@@ -170,8 +186,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Embedded Software Architect | SCG Canada Inc.</b></h5>
-            <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2020 - May 2022</h6>
-            <ul>
+            <h6 style="color:#82D1F1""><i class="fa fa-calendar fa-fw w3-margin-right" style="color:#82D1F1"></i>May 2020 - May 2022</h6>
+            <ul class="w3-text-grey">
                 <li>Coded multiple components of a new product in Java, Python, and C</li>
                 <li>Created numerous Android applications to test various product components</li>
                 <li>Prototyped every UI screen of the new Android application and organized various use-cases</li>
@@ -182,8 +198,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Software Engineering Intern | Honeywell Aerospace</b></h5>
-            <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2019 - August 2019</h6>
-            <ul>
+            <h6 style="color:#82D1F1"><i class="fa fa-calendar fa-fw w3-margin-right" style="color:#82D1F1"></i>May 2019 - August 2019</h6>
+            <ul class="w3-text-grey">
                 <li>Coded various software programs for a satcom system that provides connectivity for aircraft passengers globally </li>
                 <li>Integrated and tested software on multiple target hardware systems</li>
                 <li>Co-owned a project to create a debugging log for a main system component</li>
@@ -194,8 +210,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Marketing Coordinator | Avast Business</b></h5>
-            <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2018 - January 2019</h6>
-            <ul>
+            <h6 style="color:#82D1F1"><i class="fa fa-calendar fa-fw w3-margin-right" style="color:#82D1F1"></i>May 2018 - January 2019</h6>
+            <ul class="w3-text-grey">
                 <li>Assigned new leads daily to the respective sales people </li>
                 <li>Cleansed all customer data and uploaded to the Salesforce database</li>
                 <li>Updated and sent out certificates as part of the Partner Certification program</li>
@@ -206,12 +222,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         </div>
   
         <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Education</h2>
+          <h2 class="w3-text-grey"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge" 
+            style="color:#82D1F1; padding: 10px"></i><b>Education</b></h2>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Algonquin College</b></h5>
-            <h6><b>College Certificate, Mobile and Web User Experience Design</b></h6>
-            <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023 - Present</h6>
-            <ul>
+            <h6 class="w3-text-grey"><b>College Certificate, Mobile and Web User Experience Design</b></h6>
+            <h6 style="color:#82D1F1"><i class="fa fa-calendar fa-fw w3-margin-right" style="color:#82D1F1"></i>2023 - Present</h6>
+            <ul class="w3-text-grey">
               <li>User experience and interface design</li>
               <li>Web and mobile design techniques </li>
               <li>User experience analysis</li>
@@ -221,9 +238,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>University of Ottawa</b></h5>
-            <h6><b>Bachelor's Degree of Applied Science, Computer Engineering</b></h6>
-            <p class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2020</p>
-            <ul>
+            <h6 class="w3-text-grey"><b>Bachelor's Degree of Applied Science, Computer Engineering</b></h6>
+            <h6 style="color:#82D1F1""><i class="fa fa-calendar fa-fw w3-margin-right" style="color:#82D1F1"></i>2016 - 2020</h6>
+            <ul class="w3-text-grey">
                 <li>Concentration in computer systems and computer programming</li>
                 <li>Evaluation of user interfaces, and human-computer interaction </li>
                 <li>Design and implementation of a software/hardware project</li>
@@ -241,15 +258,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- End Page Container -->
   </div>
   
-  <footer class="w3-container w3-black w3-center w3-margin-top">
-    <p>Find me on social media.</p>
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <footer class="w3-container w3-center w3-margin-top" style="padding:30px; background-color: #82D1F1; color: white;">
+    <p>
+      Copyright 2023 © All rights Reserved. Design by Hayley Goodman
+    </p>
+    
   </footer>
   
   </body>
