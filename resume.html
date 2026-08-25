@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Hayley Goodman</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --primary: #0b1957;
+      --accent: #64b5f6;
+      --accent-light: rgba(100, 181, 246, 0.15);
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-left: 0.75rem;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Layout Structure */
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      flex: 1;
+    }
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 2rem;
+    }
+
+    /* Sidebar / Sidebar Cards */
+    .profile-card, .skills-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      margin-bottom: 2rem;
+    }
+
+    .avatar-wrapper {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .avatar-wrapper img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border: 4px solid var(--bg-card);
+    }
+
+    .profile-card h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-list {
+      list-style: none;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-list i {
+      color: var(--accent);
+      width: 18px;
+    }
+
+    /* Skills Progress Section */
+    .section-title-sm {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--bg-main);
+      padding-bottom: 0.5rem;
+    }
+
+    .skill-item {
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--text-dark);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    .interpersonal-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .interpersonal-list li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 1.25rem;
+    }
+
+    .interpersonal-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+
+    .interpersonal-list strong {
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Main Timeline Content */
+    .main-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      margin-bottom: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--bg-main);
+      padding-bottom: 0.75rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-title {
+      font-size: 1.15rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .job-meta {
+      color: var(--accent);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 0.25rem 0 0.75rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .timeline-item ul {
+      padding-left: 1.25rem;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    .timeline-item li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Hayley Goodman</a>
+      
+      <div class="nav-links">
+        <a href="resume.html" class="active">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/hayley-goodman-144644164/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/hayley_e_g/?hl=en" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:hayleyg5@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div class="resume-grid">
+
+      <!-- Left Column (Profile & Skills) -->
+      <aside>
+        <div class="profile-card">
+          <div class="avatar-wrapper">
+            <img src="/images/hformalfull.jpg" alt="Hayley Goodman">
+          </div>
+          <h2>Hayley Goodman</h2>
+          <ul class="info-list">
+            <li><i class="fa-solid fa-briefcase"></i> Software & UX Designer</li>
+            <li><i class="fa-solid fa-location-dot"></i> Ottawa, ON, Canada</li>
+            <li><i class="fa-solid fa-envelope"></i> hayleyg5@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i> (613) 617-3373</li>
+          </ul>
+        </div>
+
+        <div class="skills-card">
+          <h3 class="section-title-sm"><i class="fa-solid fa-code"></i> Technical Skills</h3>
+          
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML & CSS</span><span>90%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>Java & Python</span><span>80%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>UI/UX Design</span><span>80%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>Android Studio</span><span>75%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>React, Node & Frameworks</span><span>50%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <h3 class="section-title-sm"><i class="fa-solid fa-users"></i> Core Competencies</h3>
+          <ul class="interpersonal-list">
+            <li>
+              <strong>Written Communication</strong>
+              Developed through writing detailed technical reports, engineering documentation, and specifications.
+            </li>
+            <li>
+              <strong>Oral Communication & Teamwork</strong>
+              Refined through cross-functional team collaboration and high-volume service environments.
+            </li>
+            <li>
+              <strong>Problem Solving & Leadership</strong>
+              Practiced through directorship roles and national youth leadership academies.
+            </li>
+            <li>
+              <strong>Time Management</strong>
+              Proven ability to concurrently manage complex engineering projects and technical workloads.
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Right Column (Work Experience & Education) -->
+      <section>
+        
+        <!-- Experience Block -->
+        <div class="main-card">
+          <h2 class="section-header"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+
+          <div class="timeline-item">
+            <div class="job-title">Server / Bartender | The Barley Mow</div>
+            <div class="job-meta"><i class="fa-regular fa-calendar"></i> October 2021 – Present</div>
+            <ul>
+              <li>Deliver exceptional, friendly, and fast service to customers in a high-volume environment.</li>
+              <li>Serve food, prepare beverages, process transactions, and fulfill online take-out orders.</li>
+              <li>Work independently across host, bartender, server, and support operations simultaneously.</li>
+              <li>Manage large group events (30+ guests) with accurate itemized order and billing tracking.</li>
+              <li>Entrusted to open and close facilities independently while serving as manager on duty.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--bg-main); margin: 1.75rem 0;">
+
+          <div class="timeline-item">
+            <div class="job-title">Embedded Software Architect | SCG Canada Inc.</div>
+            <div class="job-meta"><i class="fa-regular fa-calendar"></i> May 2020 – May 2022</div>
+            <ul>
+              <li>Engineered core embedded system components utilizing Java, Python, and C.</li>
+              <li>Developed custom Android applications to test hardware-software integrations and component performance.</li>
+              <li>Prototyped full Android application UI flows and cataloged user interaction scenarios.</li>
+              <li>Evaluated emerging hardware/software technologies for inclusion in product roadmaps.</li>
+              <li>Deployed Java-based UI features into production platforms supporting critical defense and public safety operations.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--bg-main); margin: 1.75rem 0;">
+
+          <div class="timeline-item">
+            <div class="job-title">Software Engineering Intern | Honeywell Aerospace</div>
+            <div class="job-meta"><i class="fa-regular fa-calendar"></i> May 2019 – August 2019</div>
+            <ul>
+              <li>Programmed features for SATCOM connectivity systems used in global commercial aviation.</li>
+              <li>Integrated and validated software functionality across target embedded hardware rigs.</li>
+              <li>Co-led development of a system-wide log debugging utility for system diagnostics.</li>
+              <li>Authored DXL scripts to query and maintain requirement baselines inside IBM DOORS.</li>
+              <li>Participated actively in Agile/Scrum sprint cycles and retrospective planning.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--bg-main); margin: 1.75rem 0;">
+
+          <div class="timeline-item">
+            <div class="job-title">Marketing Coordinator | Avast Business</div>
+            <div class="job-meta"><i class="fa-regular fa-calendar"></i> May 2018 – January 2019</div>
+            <ul>
+              <li>Managed inbound lead qualification and routing across sales channels daily.</li>
+              <li>Maintained customer record integrity within Salesforce CRM database platforms.</li>
+              <li>Administered partner certification credentials and outbound compliance documents.</li>
+              <li>Supported deployment and analytics tracking for global B2B marketing initiatives.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education Block -->
+        <div class="main-card">
+          <h2 class="section-header"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+
+          <div class="timeline-item">
+            <div class="job-title">Algonquin College</div>
+            <div style="font-weight: 600; color: var(--text-dark);">College Certificate, Mobile & Web User Experience Design</div>
+            <div class="job-meta"><i class="fa-regular fa-calendar"></i> 2023 – Present</div>
+            <ul>
+              <li>User experience design, wireframing, and interaction design workflows.</li>
+              <li>Mobile-first design principles and modern interface architectures.</li>
+              <li>Usability testing, heuristic evaluations, and user persona mapping.</li>
+            </ul>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--bg-main); margin: 1.75rem 0;">
+
+          <div class="timeline-item">
+            <div class="job-title">University of Ottawa</div>
+            <div style="font-weight: 600; color: var(--text-dark);">B.A.Sc. Computer Engineering</div>
+            <div class="job-meta"><i class="fa-regular fa-calendar"></i> 2016 – 2020</div>
+            <ul>
+              <li>Specialized in software systems, embedded design, and computer programming.</li>
+              <li>Human-Computer Interaction (HCI) evaluation and interface design principles.</li>
+              <li>Complete capstone lifecycle engineering (hardware and software prototyping).</li>
+              <li>Deep focus on design patterns, object-oriented principles, and software architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hayley Goodman. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
