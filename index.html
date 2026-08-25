@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayley Goodman | Software Developer & Designer</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --primary: #0b1957;
+      --accent: #64b5f6;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-left: 0.75rem;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      flex: 1;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Grid Layout for Story */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      object-fit: cover;
+    }
+
+    .bio-card {
+      background: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .bio-card p {
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+      font-size: 1.05rem;
+    }
+
+    .bio-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inline-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.25rem; }
+      .story-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; } /* Add toggle script here if expanding mobile menu */
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Hayley Goodman</a>
+      
+      <div class="nav-links">
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/hayley-goodman-144644164/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/hayley_e_g/?hl=en" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:hayleyg5@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Hayley Goodman</h1>
+      <p>Software Developer & Aspiring UI/UX Designer</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">My Story</h2>
+
+    <div class="story-grid">
+      <div class="image-gallery">
+        <img src="images/Europe-collage-wtitles.jpg" alt="Travel Collage 1">
+        <img src="images/second-collage-wtitles.jpg" alt="Travel Collage 2">
+      </div>
+
+      <article class="bio-card">
+        <p>
+          Hi, I’m Hayley! A software developer based in Ottawa, Canada, with a passion for UI/UX design and building intuitive digital experiences. After graduating from the University of Ottawa with a Bachelor’s in Computer Engineering, I joined a military tech startup as an Embedded Software Architect.
+        </p>
+        <p>
+          As their first engineering hire, I contributed to early-stage product architecture, designed prototype flows, and implemented the full user interface for our core Android application.
+        </p>
+        <p>
+          Outside of engineering, I love exploring new places and cultures. In the past year alone, I’ve traveled across Europe, North America, and the Caribbean—always taking inspiration from design trends and architectures along the way.
+        </p>
+        <p>
+          Art and creative expression have always been central to my work. Check out my favorite paintings <a href="portfolio.html" class="inline-link">in my portfolio</a>, review my resume, or reach out to connect!
+        </p>
+        <p>
+          When I’m away from my desk, you'll usually find me golfing or skiing at Mont Tremblant.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hayley Goodman. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
